@@ -53,7 +53,7 @@ The plugin supports Google, Twitter, Facebook, Apple and Phone providers in Andr
 > The firebase import was changed using `esModuleInterop`, that was a [Stencil](https://stenciljs.com) requirements, please see issue [#38](https://github.com/baumblatt/capacitor-firebase-auth/issues/38).
 
 ```
-1 import firebase from 'firebase/app';
+1 import firebase from 'firebase/compat/app';
          ~~~~~~~~
     8601 export = firebase;
          ~~~~~~~~~~~~~~~~~~
@@ -341,7 +341,7 @@ No additional configurations are required by this plugin.
 #### Sign in
 
 ```typescript
-import {User} from 'firebase/app'
+import {User} from 'firebase/compat/app'
 import {cfaSignIn} from 'capacitor-firebase-auth';
 
 cfaSignIn('google.com').subscribe(
@@ -352,7 +352,7 @@ cfaSignIn('google.com').subscribe(
 #### Sign in mapping User to UserInfo
 ```typescript
  import {cfaSignIn, mapUserToUserInfo} from 'capacitor-firebase-auth';
- import {UserInfo} from 'firebase/app';
+ import {UserInfo} from 'firebase/compat/app';
  
  cfaSignIn('google.com').pipe(
  	mapUserToUserInfo(),
@@ -405,8 +405,8 @@ cfaSignInPhoneOnCodeReceived().subscribe(
 Suggestion for web authentication code to iOS, the ```verificationCode`` must be provided by the user, please see [Firebase documentation](https://firebase.google.com/docs/auth/web/phone-auth#sign-in-the-user-with-the-verification-code) for better options.
 ```typescript
 
-import firebase from 'firebase/app';
-import 'firebase/auth';
+import firebase from 'firebase/compat/app';
+import 'firebase/compat/auth';
 
 const credential = firebase.auth.PhoneAuthProvider.credential(verificationId, verificationCode);
 
@@ -424,7 +424,7 @@ the token and secret are returned for use with Twitter User API.
 #### Sign in
 
 ```typescript
-import firebase from 'firebase/app';
+import firebase from 'firebase/compat/app';
 import {cfaSignIn, SignInResult} from 'capacitor-firebase-auth/alternative'; import {SignInResult} from './definitions';
 
 cfaSignIn('twitter.com').subscribe(
@@ -438,7 +438,7 @@ cfaSignIn('twitter.com').subscribe(
 #### Sign In using direct twitter method
 
 ```typescript
-import firebase from 'firebase/app';
+import firebase from 'firebase/compat/app';
 import {cfaSignInTwitter, TwitterSignInResult} from 'capacitor-firebase-auth/alternative'; import {SignInResult} from './definitions';
 
 cfaSignInTwitter().subscribe(
@@ -452,7 +452,7 @@ cfaSignInTwitter().subscribe(
 #### Sign In;  Use credentials for something; and map to UserInfo
 
 ```typescript
-import {UserInfo} from 'firebase/app'; 
+import {UserInfo} from 'firebase/compat/app'; 
 import {cfaSignInTwitter, TwitterSignInResult, mapUserCredentialToUserInfo} from 'capacitor-firebase-auth/alternative'; 
 import {tap} from 'rxjs/operators';
 

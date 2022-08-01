@@ -1,6 +1,6 @@
-import 'firebase/auth';
+import 'firebase/compat/auth';
 
-import firebase from 'firebase/app';
+import firebase from 'firebase/compat/app';
 
 import { WebPlugin } from '@capacitor/core';
 

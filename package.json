@@ -19,7 +19,9 @@
 	"devDependencies": {
 		"@capacitor/android": "next",
 		"@capacitor/ios": "next",
+		"firebase": "^9.9.1",
 		"rimraf": "^3.0.0",
+		"rxjs": "^7.5.6",
 		"typescript": "^3.9.5 || ^4.0.0"
 	},
 	"peerDependencies": {

@@ -1,4 +1,4 @@
-import firebase from 'firebase/app';
+import firebase from 'firebase/compat/app';
 import { Observable, pipe, UnaryFunction } from 'rxjs';
 import { map } from 'rxjs/operators';
 
@@ -9,7 +9,7 @@ import { map } from 'rxjs/operators';
  *
  * ```ts
  * import {cfaSignIn, mapUserToUserInfo} from 'capacitor-firebase-auth';
- * import {UserInfo} from 'firebase/app';
+ * import {UserInfo} from 'firebase/compat/app';
  *
  * cfaSignIn('google.com').pipe(
  *     mapUserToUserInfo(),
@@ -36,7 +36,7 @@ export const mapUserToUserInfo = (): UnaryFunction<Observable<firebase.User>, Ob
  *
  * ```ts
  * import {cfaSignIn, mapUserToUserInfo} from 'capacitor-firebase-auth/alternative';
- * import {UserInfo} from 'firebase/app';
+ * import {UserInfo} from 'firebase/compat/app';
  *
  * cfaSignIn('google.com').pipe(
  *     mapUserToUserInfo(),
