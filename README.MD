@@ -53,7 +53,7 @@ The plugin supports Google, Twitter, Facebook, Apple and Phone providers in Andr
 > The firebase import was changed using `esModuleInterop`, that was a [Stencil](https://stenciljs.com) requirements, please see issue [#38](https://github.com/baumblatt/capacitor-firebase-auth/issues/38).
 
 ```
-1 import firebase from 'firebase/compat/app';
+1 import firebase from 'firebase/app';
          ~~~~~~~~
     8601 export = firebase;
          ~~~~~~~~~~~~~~~~~~
